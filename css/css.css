@@ -1,0 +1,78 @@
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	text-decoration: none;
+	user-select: none;
+	background-image: url("/assets/img/i7c4ucDzEgo.png");
+}
+.wrapper {
+}
+/* ------------------------- header ------------------------- */
+
+.header {
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+.btn__header {
+	margin: 0px 0px 0px 10px;
+}
+.btn {
+}
+.change-btn {
+}
+/* ------------------------- container ------------------------- */
+.container {
+	height: 716px;
+	display: flex;
+	display: flex;
+	justify-content: space-between;
+}
+.content__container {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.date-time {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-size: 100px;
+}
+.content__messange,
+.user-name {
+	color: white;
+	font-size: 40px;
+}
+.user-name {
+	max-width: 310px;
+	background: transparent;
+	border: none;
+	border: 1px solid #000;
+}
+.weather {
+	max-width: 10%;
+	max-height: auto;
+}
+/* ------------------------- footer ------------------------- */
+.footer {
+	max-width: 100%;
+	max-height: 100px;
+	padding: 50px 50px;
+}
+.quote {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.quote-text {
+	color: white;
+}
+.quote__btn {
+}
+.btn-quote-change {
+}
