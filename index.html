@@ -13,21 +13,23 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="btn__header">
-				<button class=" btn change-btn" type="submit">Change back ground</button>
+				<button class=" btn btn-change-bg" type="button">Change back ground</button>
 			</div>
 		</header>
 		<div class="container">
-			<div class="content__container">
-				<div class="date-time">
+			<!-- TODO вёрстка окна погоды -->
+			<div class="weather ">
+				Введите название вашего города, чтобы узнать погоду.
+				<input class="btn btn-weather" type="text" value="" placeholder="Izhevsk">
+			</div>
+			<div class="content__container ">
+				<div class="date-time content__container">
 					<div class="time"></div>
 					<div class="date"></div>
 				</div>
-				<div class="content__messange ">
-					Welcome, <input class="user-name" type="text" placeholder="Enter your Name">!
-				</div>
 			</div>
-			<div class="weather">
-				<input class="btn btn-weather" type="text" value="">
+			<div class="content__messange ">
+				Welcome, <input class="user-name" type="text" placeholder="Enter your Name">!
 			</div>
 		</div>
 		<footer class="footer">
@@ -36,7 +38,7 @@
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				</div>
 				<div class="quote__btn">
-					<button class="btn btn-quote-change" type="button">Change quote</button>
+					<button class="btn-quote-change" type="button">Change quote</button>
 				</div>
 			</div>
 		</footer>

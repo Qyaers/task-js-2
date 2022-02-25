@@ -1,8 +1,9 @@
-body {
+body,
+html {
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
-	min-height: 100%;
-	min-width: 100%;
 	text-decoration: none;
 	user-select: none;
 }
@@ -21,31 +22,63 @@ body {
 .btn {
 }
 .change-btn {
+	max-width: 310px;
+	background: transparent;
+	border: none;
+	border-radius: 10px;
+	border: 1px solid #000;
 }
 /* ------------------------- container ------------------------- */
 .container {
-	height: 716px;
+	height: auto;
 	display: flex;
-	display: flex;
-	justify-content: space-between;
-}
-.content__container {
-	width: 90%;
-	display: flex;
-	align-items: center;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
+.content__container {
+	width: 100%;
+	display: flex;
+}
 .date-time {
+	margin-top: 10%;
 	display: flex;
 	flex-direction: column;
 	color: white;
 	font-size: 100px;
 }
+.date {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.time {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content__messange {
+	margin-top: 180px;
+}
 .content__messange,
 .user-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
 	font-size: 40px;
+}
+.weather {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: flex-end;
+	margin: 0px 20px;
+}
+.btn-weather {
+	margin: 25px 0px 0px 0px;
+	max-width: 100px;
 }
 .user-name {
 	max-width: 310px;
@@ -53,12 +86,9 @@ body {
 	border: none;
 	border: 1px solid #000;
 }
-.weather {
-	max-width: 10%;
-	max-height: auto;
-}
 /* ------------------------- footer ------------------------- */
 .footer {
+	margin-top: 10px;
 	max-width: 100%;
 	max-height: 100px;
 	padding: 50px 50px;
