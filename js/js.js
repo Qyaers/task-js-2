@@ -1,6 +1,11 @@
 let btnChangeBG = document.querySelector('.btn-change-bg');
-btnChangeBG.addEventListener('click', changeBackGround);
 let btnChangeQuote = document.querySelector('.btn-quote-change');
+document.body.style.backgroundSize = 'cover';
+document.body.style.backgroundPosition = 'center';
+document.body.style.backgroundRepeat = 'no-repeat';
+document.body.style.transition = 'background 0.5s';
+
+btnChangeBG.addEventListener('click', changeBackGround);
 btnChangeQuote.addEventListener('click', changeQuote);
 
 window.onload = getTime;
@@ -13,18 +18,20 @@ setInterval(getDate, 5)
 
 // TODO запросы погоды и цитат
 // ------------------------------- functions ------------------------------
-
 function changeBackGround() {
-	let backgroundImageArr = ['/assets/img/1.jpg', '/assets/img/2.jpg', '/assets/img/3.jpg', '/assets/img/4.jpg', '/assets/img/5.jpg', '/assets/img/6.jpg'];
+	let backgroundImageArr = [
+		'/assets/img/1.jpg',
+		'/assets/img/2.jpg',
+		'/assets/img/3.jpg',
+		'/assets/img/4.jpg',
+		'/assets/img/5.jpg',
+		'/assets/img/6.jpg'];
 	let randomNum = getRandomIntInclusive(0, backgroundImageArr.length);
 	do {
 		randomNum = getRandomIntInclusive(0, backgroundImageArr.length);
 	} while (document.body.style.backgroundImage == `url("${backgroundImageArr[randomNum]}")`)
 	document.body.style.backgroundImage = `url(${backgroundImageArr[randomNum]})`;
-	document.body.style.backgroundSize = 'cover';
-	document.body.style.transition = 'all 1s'
-	document.body.style.backgroundPosition = 'center';
-	document.body.style.backgroundRepeat = 'no-repeat';
+
 }
 
 function getRandomIntInclusive(min, max) {

@@ -1,11 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 body,
 html {
 	height: 100%;
 	width: 100%;
-	margin: 0;
-	padding: 0;
 	text-decoration: none;
 	user-select: none;
+}
+body {
+	overflow-y: hidden;
 }
 .wrapper {
 }
@@ -30,7 +35,6 @@ html {
 }
 /* ------------------------- container ------------------------- */
 .container {
-	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -40,7 +44,7 @@ html {
 	display: flex;
 }
 .date-time {
-	margin-top: 10%;
+	margin-top: 150px;
 	display: flex;
 	flex-direction: column;
 	color: white;
