@@ -1,11 +1,14 @@
-let kekw = document.querySelector('.change-btn');
-console.log(kekw);
-kekw.addEventListener('click', changeBackGround);
+let btnChangeBG = document.querySelector('.change-btn');
+btnChangeBG.addEventListener('click', changeBackGround);
 window.onload = getTime;
 window.onload = getDate;
+window.onload = changeBackGround;
 
-setInterval(getTime, 100)
+setInterval(getTime, 100);
+setInterval(changeBackGround, 200000);
+setInterval(getDate, 5)
 
+// TODO сделать запросы погоды и цитат
 // ------------------------------- functions ------------------------------
 function getTime() {
 	let now = new Date();
@@ -23,10 +26,15 @@ function getDate() {
 	let date = document.querySelector('.date');
 	date.textContent = dateNow;
 }
-// Доделать
 function changeBackGround() {
-	// let Arr = ['/assets/img/151482532225385.png', '', ''];
-	document.body.style.backgroundImage = "url('/assets/img/151482532225385.png')";
+	let backgroundImageArr = ['/assets/img/1.jpg', '/assets/img/2.jpg', '/assets/img/3.jpg', '/assets/img/4.jpg', '/assets/img/5.jpg', '/assets/img/6.jpg'];
+	let randomNum = getRandomIntInclusive(0, backgroundImageArr.length);
+	document.body.style.backgroundImage = `url(${backgroundImageArr[randomNum]})`;
 	document.body.style.backgroundSize = 'cover';
 	document.body.style.backgroundRepeat = 'no-repeat';
+}
+function getRandomIntInclusive(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min)) + min;
 }
