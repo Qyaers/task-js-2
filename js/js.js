@@ -13,9 +13,9 @@ window.onload = getDate;
 window.onload = changeBackGround;
 
 setInterval(getTime, 100);
-setInterval(changeBackGround, 200000);
 setInterval(getDate, 5)
-
+setInterval(changeBackGround, 10000);
+// TODO set timeout for event button
 // TODO запросы погоды и цитат
 // ------------------------------- functions ------------------------------
 function changeBackGround() {
@@ -42,7 +42,7 @@ function getRandomIntInclusive(min, max) {
 
 function getTime() {
 	let now = new Date();
-	let timeNow = now.getHours() + ":" + (now.getMinutes() > 10 ? now.getMinutes() : "0" + now.getMinutes()) + ":" + (now.getSeconds() > 10 ? now.getSeconds() : "0" + now.getSeconds());
+	let timeNow = now.getHours() + ":" + (now.getMinutes() > 9 ? now.getMinutes() : "0" + now.getMinutes()) + ":" + (now.getSeconds() > 9 ? now.getSeconds() : "0" + now.getSeconds());
 	let time = document.querySelector('.time');
 
 	time.textContent = timeNow;
