@@ -102,8 +102,10 @@ body {
 	justify-content: space-around;
 	align-items: center;
 }
-.quote-text {
+.quote-text-text,
+.quote-text-author {
 	color: white;
+	font-size: 20px;
 }
 .quote__btn {
 }
