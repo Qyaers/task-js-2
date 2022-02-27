@@ -63,6 +63,7 @@ const changeQuote = () => {
 		quoteText.textContent = value[randomQuote].text;
 		quoteTextAuthor.textContent = value[randomQuote].author;
 	});
+	return console.log("lor");
 };
 // TODO запросы погоды
 
@@ -70,8 +71,9 @@ const changeQuote = () => {
 
 // -------------------------------  events segment ------------------------------- 
 
-let btnChangeBG = document.querySelector('.btn-change-bg');
-let btnChangeQuote = document.querySelector('.btn-quote-change');
+const btnChangeBG = document.querySelector('.btn-change-bg');
+const btnChangeQuote = document.querySelector('.btn-quote-change');
+
 document.body.style.backgroundSize = 'cover';
 document.body.style.backgroundPosition = 'center';
 document.body.style.backgroundRepeat = 'no-repeat';
@@ -79,10 +81,11 @@ document.body.style.transition = 'background 0.5s';
 
 btnChangeBG.addEventListener('click', changeBackGround);
 btnChangeQuote.addEventListener('click', changeQuote);
-window.onload = changeQuote;
-window.onload = getTime;
-window.onload = getDate;
-window.onload = changeBackGround;
+
+changeQuote();
+getTime();
+getDate();
+changeBackGround();
 
 setInterval(changeQuote, 10000)
 setInterval(getTime, 100);
