@@ -63,10 +63,29 @@ const changeQuote = () => {
 		quoteText.textContent = value[randomQuote].text;
 		quoteTextAuthor.textContent = value[randomQuote].author;
 	});
-	return console.log("lor");
 };
-// TODO запросы погоды
 
+// TODO refactor feat
+const userName = document.querySelector('.user-name');
+
+const saveUserName = () => {
+
+	localStorage.setItem('userName', userName.value);
+}
+
+const clearInput = () => {
+	userName.value = '';
+}
+
+const setUserName = () => {
+	if (localStorage.getItem('userName') == '')
+		localStorage.setItem('userName', userName.value);
+	else {
+		userName.value = localStorage.getItem('userName');
+	}
+}
+
+// TODO запросы погоды
 
 
 // -------------------------------  events segment ------------------------------- 
@@ -79,8 +98,13 @@ document.body.style.backgroundPosition = 'center';
 document.body.style.backgroundRepeat = 'no-repeat';
 document.body.style.transition = 'background 0.5s';
 
+userName.addEventListener('keyup', saveUserName);
+userName.addEventListener('click', clearInput);
+
 btnChangeBG.addEventListener('click', changeBackGround);
 btnChangeQuote.addEventListener('click', changeQuote);
+
+setUserName();
 
 changeQuote();
 getTime();
